@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQn-8l-Di4" userLabel="AM-PM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-52-WqD">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-Na-3xW" userLabel="Live Clock">
+                                        <rect key="frame" x="176" y="0.0" width="41.333333333333343" height="253"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5W3-eq-DwR">
+                                                <rect key="frame" x="0.0" y="116.33333333333334" width="41.333333333333336" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rwm-he-FtT" userLabel="TimePicker">
+                                        <rect key="frame" x="36.666666666666657" y="253" width="320" height="253"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uM-hA-YX2">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4uM-hA-YX2" firstAttribute="leading" secondItem="Rwm-he-FtT" secondAttribute="leading" id="9oU-i7-CCa"/>
+                                            <constraint firstAttribute="bottom" secondItem="4uM-hA-YX2" secondAttribute="bottom" id="Wgi-OI-7eP"/>
+                                            <constraint firstAttribute="trailing" secondItem="4uM-hA-YX2" secondAttribute="trailing" id="q48-qh-Gxb"/>
+                                            <constraint firstItem="4uM-hA-YX2" firstAttribute="top" secondItem="Rwm-he-FtT" secondAttribute="top" id="xZ7-qI-HKh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7ec-sz-fHM" userLabel="Bottom Stack">
+                                        <rect key="frame" x="131.33333333333337" y="506" width="130.66666666666663" height="253"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7NP-gY-axi">
+                                                <rect key="frame" x="0.0" y="92.333333333333371" width="130.66666666666666" height="68.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCV-s3-B6x">
+                                                        <rect key="frame" x="10.66666666666665" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Start Timer"/>
+                                                        <connections>
+                                                            <action selector="timerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICO-h5-mgz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-QD-Tae">
+                                                        <rect key="frame" x="0.0" y="34.333333333333258" width="130.66666666666666" height="34.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JQn-8l-Di4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="27N-vv-pdP"/>
+                            <constraint firstItem="BjP-52-WqD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Mz-lQ-HdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BjP-52-WqD" secondAttribute="trailing" id="93i-he-KBM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BjP-52-WqD" secondAttribute="bottom" id="9fy-8c-6m6"/>
+                            <constraint firstItem="JQn-8l-Di4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YkX-93-qtf"/>
+                            <constraint firstAttribute="bottom" secondItem="JQn-8l-Di4" secondAttribute="bottom" id="bzW-UJ-RlC"/>
+                            <constraint firstItem="JQn-8l-Di4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eq4-N8-kyP"/>
+                            <constraint firstItem="BjP-52-WqD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fS6-RE-cUg"/>
+                            <constraint firstAttribute="trailing" secondItem="JQn-8l-Di4" secondAttribute="trailing" id="iL9-N6-hvb"/>
+                            <constraint firstItem="JQn-8l-Di4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdY-pL-ziX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundAMPM" destination="JQn-8l-Di4" id="DzT-E2-fSv"/>
+                        <outlet property="currentTimeLabel" destination="5W3-eq-DwR" id="zJR-gM-N8P"/>
+                        <outlet property="datePicker" destination="4uM-hA-YX2" id="b2k-66-hTn"/>
+                        <outlet property="timeLeft" destination="P4z-QD-Tae" id="35X-gv-TG0"/>
+                        <outlet property="timerButton" destination="lCV-s3-B6x" id="EFk-qe-KaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
